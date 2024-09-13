@@ -7,8 +7,20 @@ the largest of three integers a, b, and c. Test the function with
 different values.
 
 Example Output:
+The largest number is: 15
+
 */
 
-func FinfLargest(a int, b int, c int) int {
-	return 0
+func FindLargest(a, b, c int) int {
+	largest := a
+
+	if b > largest {
+		largest = b
+	}
+
+	if c > largest {
+		largest = c
+	}
+
+	return largest
 }

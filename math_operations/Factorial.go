@@ -12,5 +12,12 @@ Factorial of 5 is: 120
 */
 
 func Factorial(n int) int {
-	return 0
+	if n == 0 || n == 1 {
+		return 1
+	}
+	var factorial int = n
+	for i := 1; i <n; i++ {
+		factorial *= i
+	}
+	return factorial
 }

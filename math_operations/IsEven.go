@@ -11,6 +11,7 @@ Number 4 is even: true
 Number 7 is even: false
 
 */
-func isEven(num int) bool {
-	return true
+func IsEven(num int) bool {
+
+	return num % 2 == 0
 }

@@ -1,6 +1,6 @@
 package math_operations
 
-import "fmt"
+import "errors"
 
 /*
 Problem: Write a program that declares two integer variables, x and y, and performs the following operations:
@@ -14,24 +14,24 @@ Difference: -10
 Product: 200
 Quotient: 0.5
 */
-func Add(a int, b int) int {
+func Add(a, b int) int {
 
 	return a + b
 }
 
-func Substract(a int, b int) int {
+func Substract(a, b int) int {
 	return a - b
 }
 
-func Multiply(a int, b int) int {
+func Multiply(a, b int) int {
 	
 	return a * b
 }
 
-func Quotient(a int, b int) int {
+func Quotient(a, b int) (float64, error) {
 	if b == 0 {
-		fmt.Println("Cannot divide by Zero")
-		return 0
+		return 0, errors.New("cannot divide by zero")
+	} else {
+		return float64(a) / float64(b), nil
 	}
-	return a / b
 }
